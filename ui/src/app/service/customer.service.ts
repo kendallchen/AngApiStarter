@@ -1,7 +1,7 @@
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { ICustomer } from '../model/ICustomer';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 
 @Injectable({
@@ -18,12 +18,13 @@ export class CustomerService {
     }
 
     //get the list of customers
-    get(){
+    get(): Observable<ICustomer[]>{
         this.http.get<ICustomer[]>(this.url).pipe(
             ).subscribe(result => {
                 if (result)
                     this.customerList.next(result)
             });
+        return this.customerList$;
     }
 
     //add customer

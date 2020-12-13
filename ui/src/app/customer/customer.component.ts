@@ -16,11 +16,10 @@ export class CustomerComponent implements OnInit {
 
     constructor(private custService: CustomerService,
         private custDialog: MatDialog) {
-        this.custService.get();
     }
 
     ngOnInit(){
-        this.custService.customerList$.subscribe(data =>
+        this.custService.get().subscribe(data =>
             this.customerList = data
         );
     }
