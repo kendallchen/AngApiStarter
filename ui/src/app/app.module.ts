@@ -20,8 +20,8 @@ import { CustomerDialog } from './customer/dialog/customer-dialog.component';
     BrowserAnimationsModule,
     MaterialModule,
     RouterModule.forRoot([
-        { path: '', component: CustomerComponent },
-    ]),
+    { path: '', component: CustomerComponent },
+], { relativeLinkResolution: 'legacy' }),
   ],
   declarations: [
     AppComponent,
