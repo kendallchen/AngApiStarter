@@ -1,0 +1,7 @@
+/api/Api/bin
+/api/Api/obj
+/api/Data/bin
+/api/Data/obj
+/api/.vs
+/ui/.vscode
+/ui/node_modules
