@@ -5,3 +5,4 @@
 /api/.vs
 /ui/.vscode
 /ui/node_modules
+/ui/dist
