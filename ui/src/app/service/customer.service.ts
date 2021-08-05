@@ -2,7 +2,7 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { ICustomer } from '../model/ICustomer';
 import { BehaviorSubject, Observable } from 'rxjs';
-import { environment } from 'src/environments/environment';
+import { AppConfigService } from './app-config.service';
 
 @Injectable({
   providedIn: 'root'
@@ -12,9 +12,10 @@ export class CustomerService {
     private customerList = new BehaviorSubject<ICustomer[] | null>(null);
     customerList$ = this.customerList.asObservable();
 
-    readonly url = `${environment.apiCustomer}`;
+    readonly url = this.appConfig.get('apiCustomer');
 
-    constructor(private http:HttpClient) { 
+    constructor(private http:HttpClient,
+                private appConfig: AppConfigService) { 
     }
 
     //get the list of customers
