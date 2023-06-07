@@ -1,5 +1,4 @@
 /* Global Styles */
-
 * {
   font-family: 'Roboto', Arial, sans-serif;
   box-sizing: border-box;
@@ -7,42 +6,16 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-body {
-  margin: 0;
-}
-
-/* Text */
-
-h1 {
-  font-size: 32px;
-}
-
-h2 {
-  font-size: 20px;
-}
-
-h1, h2 {
-  font-weight: lighter;
-}
-
-p {
-  font-size: 14px;
-}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 /* Hyperlink */
-
 a {
   cursor: pointer;
-  color: #1976d2;
   text-decoration: none;
 }
 
-a:hover {
-  opacity: 0.8;
-}
-
 /* Input */
-
 input {
   font-size: 14px;
   border-radius: 2px;
@@ -56,7 +29,6 @@ label {
   font-weight: bold;
   margin-bottom: 4px;
   display: block;
-  text-transform: uppercase;
 }
 
 /* Button */
@@ -82,20 +54,7 @@ label {
   cursor: auto;
 }
 
-app-top-bar {
-    width: 100%;
-    background-color: #1976d2;
-    padding: 16px;
-    display: flex;
-    flex-direction: row;
-}
 
-app-top-bar h1 {
-    color: white;
-}
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
